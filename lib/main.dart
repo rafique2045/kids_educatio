@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:kids_education/bottom_section.dart';
+import 'package:kids_education/stories_box.dart';
 
 void main() {
   runApp(const MyApp());
@@ -269,158 +271,111 @@ class MyApp extends StatelessWidget {
                 style: GoogleFonts.quicksand(
                     fontWeight: FontWeight.w900, fontSize: 26),
               ),
-
+              //Our Stories Section
               Container(
-                height: 700,
+                height: 600,
                 padding: EdgeInsets.all(12.0),
                 decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFFFFFFF),
+                      Color(0xFFFFFFFF),
+                      Color(0xFFE6D8B0),
+                    ],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
                   image: DecorationImage(
-                    image: AssetImage('assets/bg_1.jpg'),
+                    opacity: 0.5,
+                    image: AssetImage(
+                      'assets/bg_1.jpg',
+                    ),
                     fit: BoxFit.cover,
                   ),
                 ),
-                child: GridView.count(
-                  crossAxisCount: 2,
+                child: Column(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white54,
-                          borderRadius: BorderRadius.circular(10.0),
+                    Row(
+                      children: [
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.green[600],
                         ),
-                        child: Stack(
-                          children: [
-                            Column(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10.0),
-                                      topRight: Radius.circular(10.0)),
-                                  child: Image.asset(
-                                    'assets/kids_cleaning.jpg',
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Find out if a school fits \nthe family’s needs',
-                                  style: GoogleFonts.quicksand(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w900),
-                                )
-                              ],
-                            )
-                          ],
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.blueAccent,
                         ),
-                      ),
+                      ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white54,
-                          borderRadius: BorderRadius.circular(10.0),
+                    Row(
+                      children: [
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.green[600],
                         ),
-                        child: Stack(
-                          children: [
-                            Column(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10.0),
-                                      topRight: Radius.circular(10.0)),
-                                  child: Image.asset(
-                                    'assets/kids_cleaning.jpg',
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Find out if a school fits \nthe family’s needs',
-                                  style: GoogleFonts.quicksand(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w900),
-                                )
-                              ],
-                            )
-                          ],
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.blueAccent,
                         ),
-                      ),
+                      ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white54,
-                          borderRadius: BorderRadius.circular(10.0),
+                    Row(
+                      children: [
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.green[600],
                         ),
-                        child: Stack(
-                          children: [
-                            Column(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10.0),
-                                      topRight: Radius.circular(10.0)),
-                                  child: Image.asset(
-                                    'assets/kids_cleaning.jpg',
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Find out if a school fits \nthe family’s needs',
-                                  style: GoogleFonts.quicksand(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w900),
-                                )
-                              ],
-                            )
-                          ],
+                        StoriesBox(
+                          image: 'assets/kids_cleaning.jpg',
+                          detailText:
+                              'Find out if a school fits\nthe family’s needs',
+                          color: Colors.blueAccent,
                         ),
-                      ),
+                      ],
                     ),
-                    Padding(
-                      padding: EdgeInsets.all(5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white54,
-                          borderRadius: BorderRadius.circular(10.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Column(
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(10.0),
-                                      topRight: Radius.circular(10.0)),
-                                  child: Image.asset(
-                                    'assets/kids_cleaning.jpg',
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
-                                  'Find out if a school fits \nthe family’s needs',
-                                  style: GoogleFonts.quicksand(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w900),
-                                )
-                              ],
-                            )
-                          ],
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: EdgeInsets.only(left: 120, right: 120),
+                        child: Container(
+                          //padding: EdgeInsets.only(left: 10),
+                          height: 30,
+
+                          decoration: BoxDecoration(
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "View All",
+                              style: GoogleFonts.quicksand(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
               ),
+              // Bottom Section
+
+              BottomSection(),
             ],
           )),
     );
